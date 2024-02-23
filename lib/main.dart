@@ -17,10 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue[900],
           title: const Text(
             'SKYGO',
-            style: TextStyle(fontWeight: FontWeight.w900, color: Colors.white),
           ),
         ),
         body: const AppContent(),
@@ -88,9 +86,9 @@ class _AppContentState extends State<AppContent> {
   }
 
   Future<List<User>> getUsers() async {
-    final response = await http.get(
-      Uri.parse('https://jsonplaceholder.typicode.com/users'),
-    );
+    final response = await http.get(Uri.parse('http://10.0.2.2:3000/users')
+        // Uri.parse('https://jsonplaceholder.typicode.com/users'),
+        );
 
     if (response.statusCode == 200) {
       final List<dynamic> data = jsonDecode(response.body);
