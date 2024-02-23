@@ -24,6 +24,30 @@ class UserDetails extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const Text(
+                        'USERNAME',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w900,
+                          color: Color.fromARGB(255, 107, 107, 107),
+                        ),
+                      ),
+                      Text(
+                        '${user.username}',
+                        style: const TextStyle(
+                          fontSize: 16,
+                          color: Color.fromARGB(255, 107, 107, 107),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Divider(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const Text(
                         'EMAIL',
                         style: TextStyle(
                           fontSize: 14,
