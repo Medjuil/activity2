@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:person/components/todo_btn.dart';
 import 'package:person/features/users/data/models/user.dart';
+import 'package:person/pages/todo_page.dart';
 
 class UserDetails extends StatelessWidget {
   final User user;
@@ -158,6 +160,17 @@ class UserDetails extends StatelessWidget {
                     ],
                   ),
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
+                TodoBtn(onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ToDos(),
+                    ),
+                  );
+                })
               ],
             ),
           ),
