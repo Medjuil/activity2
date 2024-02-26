@@ -3,7 +3,7 @@ import 'package:person/features/users/data/models/todo.dart';
 import 'package:person/services/todos_services.dart';
 
 class ToDos extends StatefulWidget {
-  const ToDos({Key? key}) : super(key: key);
+  const ToDos({super.key});
 
   @override
   State<ToDos> createState() => _ToDosState();
@@ -22,7 +22,7 @@ class _ToDosState extends State<ToDos> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todo\'s List'),
+        title: const Text('Todo\'s List'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -46,7 +46,7 @@ class _ToDosState extends State<ToDos> {
             } else if (snapshot.hasError) {
               return Text('Error: ${snapshot.error}');
             } else {
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             }

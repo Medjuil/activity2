@@ -167,7 +167,7 @@ class UserDetails extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ToDos(),
+                      builder: (context) => const ToDos(),
                     ),
                   );
                 })

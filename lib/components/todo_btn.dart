@@ -9,8 +9,8 @@ class TodoBtn extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(18),
-        margin: EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.all(18),
+        margin: const EdgeInsets.symmetric(horizontal: 30),
         decoration: BoxDecoration(
             border: Border.all(), borderRadius: BorderRadius.circular(5)),
         child: const Center(
